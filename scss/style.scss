@@ -1,0 +1,43 @@
+//base
+@import 'fonts';
+@import 'global';
+@import 'vars';
+
+//header
+@import 'header';
+
+//main-slider
+@import 'blocks/main';
+
+//aside Hot Deals
+@import 'blocks/aside-deals';
+
+//aside New Products
+@import 'blocks/aside-products';
+
+//aside Offer
+@import 'blocks/aside-offer';
+
+//aside testimonials
+@import 'blocks/testimonials.scss';
+
+//aside news
+@import 'blocks/news.scss';
+
+//section arrivals
+@import 'blocks/section-arrivals.scss';
+
+//section offer
+@import 'blocks/offer.scss';
+
+//section best
+@import 'blocks/best.scss';
+
+//section featured
+@import 'blocks/featured.scss';
+
+//section section-product
+@import 'blocks/section-product.scss';
+
+//media
+@import 'media';

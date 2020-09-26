@@ -1,0 +1,312 @@
+.header {
+  @include Roboto;
+  &__top {
+    background-color: #3b83d4;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    padding: 10px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column-left, &__column-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__login-link, &__help, &__wishlist {
+    padding-right: 20px;
+    margin-right: 20px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: color .2s;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      height: 18px;
+      background-color: #fff;
+      opacity: .1;
+    }
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  &__currency, &__lang {
+    padding-right: 15px;
+    position: relative;
+    transition: all .2s;
+    cursor: pointer;
+    &::before {
+      content: url(../images/header-img/sort-down-solid.svg);
+      position: absolute;
+      width: 9px;
+      right: 0;
+      bottom: 0;
+    }
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  &__wishlist {
+    margin-right: 45px;
+    padding-left: 20px;
+    position: relative;
+    &::after{
+      content: url(../images/header-img/heart-regular.svg);
+      position: absolute;
+      left: 0;
+      width: 13px;
+    }
+  }
+  &__lang {
+    margin-right: 20px;
+  }
+  &__download {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba($color: #000000, $alpha: .1);
+    padding: 8px 10px;
+    transition: all .2s;
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  &__bottom {
+    background-color: #3f8be0;
+  }
+  &__inner-padding {
+    padding: 27px 0;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    &-text {
+      @include Raleway;
+      font-weight: 700;
+      font-size: 26px;
+      margin-left: 5px;
+    }
+  }
+  &__form {
+    
+    margin-right: 30px;
+    &-search, &-select, &-button {
+      padding: 17px 0;
+      border: none;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    &-search {
+      min-width: 410px;
+      border-right: 1px solid #e8e8e8;
+      padding-left: 14px;
+      padding-right: 14px;
+      color: #aaa;
+      
+    }
+    &-select, &-button {
+      margin-left: -4px;
+    }
+    &-select {
+      padding-left: 14px;
+      padding-right: 32px;
+      font-weight: 500;
+      color: #191a1c;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url(../images/header-img/chevron-down-solid.svg);
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: 90% 50%;
+    }
+    &-button {
+      cursor: pointer;
+      padding-left: 19px;
+      padding-right: 19px;
+      background-color: #ffd200;
+    }
+  }
+  &__curt-price {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 17px;
+    
+  }
+  &__curt-icon {
+    cursor: pointer;
+    padding-right: 13px;
+    margin-right: 14px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1px;
+      background-color: #e5e5e5;
+      top: -14px;
+      height: 47px;
+    }
+  }
+  &__text-price {
+    color: #555;
+    font-size: 12px;
+    &--blue {
+      color: #408de4;
+    }
+  }
+  &__inner-nav {
+    justify-content: start;
+    position: relative;
+  }
+  &__nav-vectical {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 20px;
+    flex: 0 0 270px;
+    background-color: #ffd200;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    font-weight: 500;
+    z-index: 50;
+  }
+  &__nav-icon {
+    cursor: pointer;
+  }
+
+  &__nav-dropmenu {
+    // display: none;
+    background-color: #fff;
+    width: 270px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  &__nav-dropmenu-item {
+    border: 1px solid #e8e8e8;
+    padding: 17px 0;
+    padding-left: 22px;
+    & + & {
+      border-top: none;
+    }
+  }
+  &__nav-dropmenu-link {
+    color: #666;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .icon-desktop::before, .icon-mobile::before, .icon-sport::before, .icon-food::before, .icon-tags::before, .icon-curt::before, 
+  .icon-camera::before, .icon-tools::before, .icon-headphones::before, .icon-apple::before {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+  }
+  .icon-desktop::before {
+    content: url(../images/header-img/desktop-solid.svg);
+    width: 16px;
+    
+  }
+  .icon-mobile::before {
+    content: url(../images/header-img/mobile-alt-solid.svg);
+    width: 9px;
+  }
+  .icon-sport::before {
+    content: url(../images/header-img/futbol-solid.svg);
+    width: 15px;
+  }
+  .icon-food::before {
+    content: url(../images/header-img/leaf-solid.svg);
+    width: 16px;
+  }
+  .icon-tags::before {
+    content: url(../images/header-img/tags-solid.svg);
+    width: 16px;
+  }
+  .icon-curt::before {
+    content: url(../images/header-img/shopping-basket-solid.svg);
+    width: 18px;
+  }
+  .icon-camera::before {
+    content: url(../images/header-img/camera-retro-solid.svg);
+    width: 15px;
+  }
+  .icon-tools::before {
+    content: url(../images/header-img/tools-solid.svg);
+    width: 15px;
+  }
+  .icon-headphones::before {
+    content: url(../images/header-img/headphones-solid.svg);
+    width: 14px;
+  }
+  .icon-apple::before {
+    content: url(../images/header-img/apple-brands.svg);
+    width: 12px;
+  }
+
+
+
+
+  &__nav-horizontal {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 100%;
+  }
+  &__nav-list {
+    margin-left: 40px;
+    @include Raleway;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    color: #eeeeee;
+  }
+  &__nav-item {
+    display: inline-block;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+  &__nav-link {
+    color: #fff;
+    transition: all .2s;
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  &__nav-tel {
+    color: #bbbbbb;
+    margin-right: 20px;
+    span {
+      margin-left: 5px;
+      background-color: #ffd200;
+      color: #333333;
+      padding: 4px 8px;
+      font-weight: 600;
+      transition: all .3s;
+      &:hover{
+        color: lighten($color: #333, $amount: 20%);
+      }
+    }
+  }
+}

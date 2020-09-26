@@ -1,0 +1,122 @@
+.sale {
+  &__item {
+    @include Poppins;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 850px;
+    min-height: 470px;
+    background-color: #d0d0d0;
+    margin-left: auto;
+    display: block !important;
+    margin-top: 20px;
+    padding-top: 156px;
+    padding-left: 85px;
+    position: relative;
+    overflow: hidden;
+    span {
+      font-weight: 400;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #c3c3c3;
+      width: 100%;
+      height: 33%;
+      bottom: -80px;
+      left: 0;
+      transform: skewY(10deg);
+      z-index: 1;
+    }
+    &-title {
+      font-size: 40px;
+      letter-spacing: -0.8px;
+    }
+    &-text {
+      letter-spacing: -0.32px;
+      font-weight: 500;
+    }
+    &-btn {
+       background-color: #fff;
+       color: #000;
+       padding: 12px 15px;
+       border-radius: 4px;
+       margin-top: 20px;
+       font-weight: 500;
+       transition: all .3s;
+       &:hover {
+         background-color: darken(#fff, 5%);
+       }
+    }
+  }
+  .slick-dots {
+    max-width: 74.4%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    li {
+      font-size: 0;
+      background-color: #e7e7e7;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      margin: 0 4px;
+    }
+    button {
+      border: none;
+    }
+  }
+  .slick-active {
+    background-color: #fff !important;
+  }
+  &__wrapper {
+    display: flex;
+}
+  &__list {
+    flex-grow: 1;
+    background-color: #d0d0d0;
+    margin-top: 30px;
+    margin-bottom: 51px;
+    border-radius: 3px;
+    color: white;
+    padding: 61px 0 64px 30px;
+    & + & {
+      margin-left: 20px;
+    }
+    &-title {
+      @include Poppins;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: -0.63px;
+    }
+    &-text {
+      @include cabin;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      background-color: #a5c655;
+      display: inline-block;
+      padding: 7px 29px;
+      margin: 11px 0 18px;
+    }
+    &-price {
+      @include Oswald;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: 0.85px;
+      width: 153px;
+      text-align: center;
+    }
+  }
+}

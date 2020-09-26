@@ -1,0 +1,39 @@
+.offer {
+  &__inner {
+    width: 265px;
+    min-height: 340px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include Poppins;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  &__text-womens {
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: #323232;
+    background-color: #fff;
+    padding: 7px 9px;
+    
+  }
+  &__text-sale {
+    font-size: 19px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #2a2b2e;
+    margin: 10px 0 20px;
+  }
+  &__link {
+    font-size: 12px;
+    line-height: 1;
+    color: #555;
+    transition: all .2s;
+    &:hover {
+      color: darken($color: #555, $amount: 10);
+    }
+  }
+}

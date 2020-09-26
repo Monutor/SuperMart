@@ -1,0 +1,100 @@
+@import 'vars';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a  {
+  text-decoration: none;
+  display: inline-block;
+  transition: all .3s;
+  &:hover{
+    color: inherit;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-flex {
+  display: flex;
+}
+
+.arrivals__sliders, .best__sliders {
+  max-width: 842px;
+}
+
+.arrivals__item--sale::after, .arrivals__item--new::after {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 42px;
+  padding: 5px;
+  font-size: 12px;
+  @include Roboto;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.rate-yo {
+  padding: 0;
+}
+
+.aside + .aside {
+  margin-top: 33px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.row-aside {
+  flex: 20%;
+}
+
+.row-section {
+  flex: 80%;
+  margin-left: 34px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}

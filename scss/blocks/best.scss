@@ -1,0 +1,51 @@
+.best {
+  padding-top: 48px;
+  &__sliders {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex !important;
+    position: relative;
+    flex: 50%;
+    border: 1px solid #e8e8e8;
+    padding: 40px 40px 62px 40px;
+  }
+  &__item-images {
+    max-width: 135px;
+    margin-right: 30px;
+  }
+  &__item-desc {
+    @include Roboto;
+    font-size: 14px;
+  }
+  &__item-title {
+    color: #444;
+  }
+  &__item-price {
+    color: #222;
+    font-weight: 500;
+    margin-top: 7px;
+  }
+  &__item-rate {
+    margin-top: 11px;
+    margin-bottom: 19px;
+  }
+  &__item-btn {
+    padding: 7px 13px;
+    border: 1px solid #e5e5e5;
+    background-color: #fcfcfc;
+    font-size: 11px;
+    @include Raleway;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .55px;
+    color: #222;
+    line-height: 26px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      background-color: darken($color: #fcfcfc, $amount: 10%);
+    }
+  }
+}

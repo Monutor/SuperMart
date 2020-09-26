@@ -1,0 +1,45 @@
+.categories {
+  padding-top: 48px;
+  padding-bottom: 100px;
+  &__item {
+    display: flex;
+  }
+  &__item-list {
+    width: 115px;
+    padding: 23px;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover {
+      border-top: 3px solid #408de4;
+      background-color: #fcfcfc;
+    }
+  }
+
+  &__item-title {
+    margin-top: 20px;
+    @include Roboto;
+    font-size: 12px;
+    color: #222222;
+    text-transform: uppercase;
+  }
+  
+  .arrivals__item--banner {
+    padding: 15px;
+    max-width: 284px;
+    min-height: 327px;
+  }
+  &__sliders {
+    margin-top: 26px;
+  }
+  &__sliders-item {
+    max-width: 214px;
+  }
+}
+
+.owl-stage {
+  // width: 100% !important;
+}
